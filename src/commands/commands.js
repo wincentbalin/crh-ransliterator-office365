@@ -5,9 +5,21 @@
 
 /* global global, Office, self, window */
 
-Office.onReady(() => {
+Office.onReady((info) => {
   // If needed, Office.js is ready to be called
+  if (info.host === Office.HostType.Word) {
+    document.getElementById('latin2cyrillic').onclick = crhLatinToCyrillic;
+    document.getElementById('cyrillic2latin').onclick = crhCyrillicToLatin;
+  }
 });
+
+function crhCyrillicToLatin() {
+  // TODO: Implement transliteration
+}
+
+function crhLatinToCyrillic () {
+  // TODO: Implement transliteration
+}
 
 /**
  * Shows a notification when the add-in command is executed.
